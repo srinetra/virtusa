@@ -5,6 +5,8 @@ import Button from '@material-ui/core/Button';
 import Container from '@material-ui/core/Container';
 import Avatar from '../images/avatar.webp'
 import NavBar from "./NavBar";
+import HomeComponent from "./HomeComponent";
+import Trending from "./Trending";
 
 export default class HomeScreen extends React.Component{
 
@@ -64,7 +66,12 @@ export default class HomeScreen extends React.Component{
             <div>
 
                 <Container>
-                    <NavBar/>
+                    <Container >
+                        <NavBar/>
+                    </Container>
+
+                    <HomeComponent/>
+                    <Trending/>
                 </Container>
 
             </div>

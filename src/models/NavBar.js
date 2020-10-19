@@ -31,7 +31,19 @@ export default class NavBar extends React.Component{
         {
             this.setState({Dayhour:"Good AfterNoon"})
 
-        }else if(Hour.getHours()>=16&&Hour.getHours()<24)
+        }else if(Hour.getHours()>=16&&Hour.getHours()<21)
+        {
+            this.setState({Dayhour:"Good Evening"})
+
+
+        }
+        else if(Hour.getHours()>21)
+        {
+            this.setState({Dayhour:"Happy Night"})
+
+
+        }
+        else if(Hour.getHours()<5)
         {
             this.setState({Dayhour:"Happy Night"})
 
@@ -63,12 +75,12 @@ export default class NavBar extends React.Component{
             <div>
 
                 <Container>
-                    <Grid container style={{marginTop:'7%'}}>
-                        <Grid item xs={12} sm={6} style={{height:'100px'}}>
+                    <Grid container style={{marginTop:'5%'}}>
+                        <Grid item xs={12} sm={8} style={{height:'100px'}}>
 
                             <div>
-                                <text style={{fontSize:'50px',fontFamily:'roboto',fontWeight:'bold'}}>
-                                    Medium|
+                                <text style={{fontSize:'40px',fontFamily:'roboto',fontWeight:'bold'}}>
+                                        Virtusa|
                                 </text>
                                 <text style={{fontSize:'20px',fontFamily:'roboto',fontWeight:'bold'}}>
                                     {this.state.Dayhour}
@@ -77,24 +89,15 @@ export default class NavBar extends React.Component{
                             </div>
 
                         </Grid>
-                        <Grid container xs={12} sm={6} style={{height:'50px',}}>
-
-                            <Grid item xs={6} sm={6} style={{display:'flex',justifyContent:'center',alignSelf:'center',}}>
+                        <Grid container xs={12} sm={4} style={{height:'50px',display:"flex",}}>
 
 
-                                <div style={{height:'50px',width:'100px',display:'flex',justifyContent:'center',alignItems:'center',border: '1px solid black',borderRadius: '15px',}}>
-                                    Upgrade
-                                </div>
-
-                            </Grid>
+                            <Grid container xs={6} sm={8} style={{display:'flex',justifyContent:'center',alignSelf:'center',}}>
 
 
-
-                            <Grid container xs={6} sm={6} style={{display:'flex',justifyContent:'center',alignSelf:'center',}}>
-
-
-                                <Grid item xs={6} sm={6} style={{display:'flex',justifyContent:'center',alignSelf:'center',}}>
+                                <Grid item xs={6} sm={6} style={{display:'flex',justifyContent:"flex-end",alignSelf:'center',}}>
                                     <div>Ayush Kumar</div>
+
 
                                 </Grid>
                                 <Grid item xs={6} sm={6} style={{display:'flex',justifyContent:'center',alignSelf:'center',}}>
@@ -108,6 +111,18 @@ export default class NavBar extends React.Component{
                                 </Grid>
 
                             </Grid>
+                            <Grid item xs={6} sm={4} style={{display:'flex',justifyContent:'center',alignSelf:'center',}}>
+
+
+                                <div style={{height:'50px',width:'100px',display:'flex',justifyContent:'center',alignItems:'center',border: '1px solid black',borderRadius: '15px',}}>
+                                    Upgrade
+                                </div>
+
+                            </Grid>
+
+
+
+
 
                         </Grid>
                     </Grid>
